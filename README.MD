@@ -1,6 +1,6 @@
 # 🐹 My Go Learning Plan
 
-Over the next two weeks, I'm going to focus on learning the Go programming language through a mix of structured content and hands-on practice.
+Over the next weeks, I'm going to focus on learning the Go programming language through a mix of structured content and hands-on practice.
 
 ## What I'll Be Doing
 
