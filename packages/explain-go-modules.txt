@@ -1,0 +1,53 @@
+
+How Go Modules Work (Simplified)
+
+1. What is a Go Module?
+------------------------
+A Go module is a collection of related Go packages. It defines the root of your project and includes a go.mod file that specifies the module name and dependencies.
+
+You create a module with:
+    go mod init <module-name>
+
+This command creates a 'go.mod' file which looks like this:
+    module github.com/username/projectname
+    go 1.21
+
+2. Why Modules Matter
+----------------------
+Modules allow Go to manage dependencies across projects. They replace the old GOPATH-based system, making it easier to work with projects in any folder.
+
+3. Structure of a Go Module
+----------------------------
+ProjectRoot/
+├── go.mod               # Module definition
+├── go.sum               # (Auto-managed) Dependency checksums
+├── main.go              # Main package file
+└── pkg/
+    └── utils/
+        ├── helper.go    # helper package files
+        └── helper2.go
+
+4. Import Paths in Modules
+---------------------------
+You import using the module path declared in 'go.mod'. For example:
+    import "github.com/username/projectname/pkg/utils"
+
+5. How the Build Works
+-----------------------
+- 'go run' compiles and executes your main package
+- 'go build' compiles your project into a binary
+- Go scans your imports and includes all relevant files
+- Only exported (uppercase-named) functions/types can be accessed outside their package
+
+6. Useful Commands
+-------------------
+- go mod tidy      # Cleans up unused imports and adds missing ones
+- go get           # Adds a new dependency
+- go build         # Compiles the code
+- go run main.go   # Compiles and runs main.go
+
+7. Tips
+--------
+- Keep each package in its own folder
+- Use uppercase to export, lowercase to keep private
+- Use `go mod tidy` often to keep your go.mod and go.sum clean
