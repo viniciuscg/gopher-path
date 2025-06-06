@@ -50,7 +50,7 @@ type Admin struct {
 
 // --- METHOD ON EMBEDDED TYPE ---
 func (a Admin) Promote() {
-	fmt.Printf("%s has been promoted to admin level %d!\n", a.Name, a.Level)
+	fmt.Printf("%s has been promoted to admin level %d!", a.Name, a.Level)
 }
 
 func main() {
