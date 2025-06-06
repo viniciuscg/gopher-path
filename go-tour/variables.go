@@ -74,14 +74,14 @@ func main() {
 
 	// Output:
 	// Type: bool Value: false
-	fmt.Printf("Type: %T Value: %v\n", ToBe, ToBe)
+	fmt.Printf("Type: %T Value: %v", ToBe, ToBe)
 
 	// Type: uint64 Value: 18446744073709551615
-	fmt.Printf("Type: %T Value: %v\n", MaxInt, MaxInt)
+	fmt.Printf("Type: %T Value: %v", MaxInt, MaxInt)
 
 	// Type: complex128 Value: (2+3i)
 	// This is the square root of (-5 + 12i)
-	fmt.Printf("Type: %T Value: %v\n", z, z)
+	fmt.Printf("Type: %T Value: %v", z, z)
 }
 
 // Function: swap

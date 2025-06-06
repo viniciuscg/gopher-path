@@ -41,7 +41,7 @@ func main() {
 func profile(name string) func() {
 	start := time.Now()
 	return func() {
-		fmt.Printf("Execution of %s took %s\n", name, time.Since(start))
+		fmt.Printf("Execution of %s took %s", name, time.Since(start))
 	}
 }
 

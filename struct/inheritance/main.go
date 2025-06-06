@@ -47,5 +47,5 @@ func main() {
 	// Both are valid; use whichever makes your code clearer.
 
 	// Output the full student struct for reference.
-	fmt.Printf("Student Info: %+v\n", s)
+	fmt.Printf("Student Info: %+v", s)
 }

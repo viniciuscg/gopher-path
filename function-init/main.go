@@ -38,7 +38,7 @@ func init() {
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
 
 	fmt.Println("Config initialized:", globalConfig)
-	fmt.Println("=== [init()] DONE ===\n")
+	fmt.Println("=== [init()] DONE ===")
 }
 
 // --- MAIN FUNCTION ---
