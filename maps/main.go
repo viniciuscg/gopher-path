@@ -65,5 +65,5 @@ func main() {
 	var nilMap map[string]int
 	fmt.Println("Nil map read:", nilMap["ghost"]) // Safe; prints 0
 
-	// nilMap["ghost"] = 99 // 🔥 Would panic: assignment to entry in nil map
+	// nilMap["ghost"] = 99 // Would panic: assignment to entry in nil map
 }

@@ -24,7 +24,7 @@ func main() {
 	// --- POINTERS WITH FUNCTIONS ---
 
 	value := 50
-	fmt.Println("\nBefore increment:", value)
+	fmt.Println("Before increment:", value)
 
 	// Call a function passing a pointer to 'value'
 	increment(&value)
@@ -38,13 +38,13 @@ func main() {
 	var pf *float64 // pointer to float64
 
 	// All of them have a default zero value of 'nil'
-	fmt.Println("\nUninitialized pointers:", pi, ps, pf)
+	fmt.Println("Uninitialized pointers:", pi, ps, pf)
 
 	// --- MEMORY ALLOCATION WITH `new` ---
 
 	// The `new` keyword allocates zeroed storage for a type and returns a pointer to it.
-	numPtr := new(int)                               // *int, initially 0
-	fmt.Println("\nValue via new pointer:", *numPtr) // Output: 0
+	numPtr := new(int)                             // *int, initially 0
+	fmt.Println("Value via new pointer:", *numPtr) // Output: 0
 	*numPtr = 99
 	fmt.Println("Updated value via pointer:", *numPtr) // Output: 99
 
@@ -53,7 +53,7 @@ func main() {
 	// --- NIL CHECKS ---
 
 	var p *int
-	fmt.Println("\nNil pointer:", p) // Output: <nil>
+	fmt.Println("Nil pointer:", p) // Output: <nil>
 
 	if p == nil {
 		fmt.Println("Safe to skip dereferencing a nil pointer")
@@ -72,7 +72,7 @@ func main() {
 	up := &u
 
 	// Go allows direct field access via struct pointer
-	fmt.Println("\nUser name via pointer:", up.name)
+	fmt.Println("User name via pointer:", up.name)
 
 	// Update the field via the pointer
 	up.name = "Gopher"
@@ -85,7 +85,7 @@ func main() {
 	//
 	// Example:
 	x := createPointer()
-	fmt.Println("\nPointer from function:", *x) // Output: 42
+	fmt.Println("Pointer from function:", *x) // Output: 42
 }
 
 // --- FUNCTION THAT MODIFIES A VALUE VIA POINTER ---

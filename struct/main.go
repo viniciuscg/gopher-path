@@ -6,7 +6,7 @@ import "fmt"
 // Structs in Go are like lightweight classes or records.
 // This 'user' type has three fields: name, age, and address (which is another struct).
 type user struct {
-	name    string  // User's name
+	name    string  `json:"my-name"` // User's name
 	age     uint    // User's age (unsigned integer)
 	address address // Nested struct for address details
 }
