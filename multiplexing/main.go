@@ -26,10 +26,10 @@ func cancellableWorker(done <-chan struct{}, id int) {
 	for {
 		select {
 		case <-done:
-			fmt.Printf("Worker %d: Received cancellation signal, stopping\n", id)
+			fmt.Printf("Worker %d: Received cancellation signal, stopping", id)
 			return
 		default:
-			fmt.Printf("Worker %d: Working...\n", id)
+			fmt.Printf("Worker %d: Working...", id)
 			time.Sleep(1 * time.Second)
 		}
 	}
